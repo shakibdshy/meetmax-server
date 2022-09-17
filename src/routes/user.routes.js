@@ -1,5 +1,5 @@
 import express from "express";
-import { deleteUser, getAllUsers, getUser } from "../controllers/user.controller.js";
+import { deleteUser, followUser, getAllUsers, getUser, updateUser } from "../controllers/user.controller.js";
 import { verifyToken } from "../verifyToken.js";
 
 const router = express.Router();
@@ -11,9 +11,12 @@ router.get("/", getAllUsers)
 router.get("/find/:id", getUser)
 
 // Update User
-// router.put("/:id", updateUser);
+router.put("/:id", updateUser);
 
 // Delete User
 router.delete("/:id", verifyToken, deleteUser)
+
+// Follow User
+router.put("/:id/follow", verifyToken, followUser)
 
 export default router;
