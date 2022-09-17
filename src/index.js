@@ -5,6 +5,7 @@ import cors from 'cors'
 import cookieParser from 'cookie-parser';
 import authRouter from './routes/auth.routes.js';
 import userRouter from './routes/user.routes.js';
+import postRouter from './routes/post.routes.js';
 
 const app = express();
 dotenv.config();
@@ -28,6 +29,7 @@ app.use(cookieParser());
 app.use(express.json());
 app.use("/api/auth", authRouter);
 app.use("/api/users", userRouter);
+app.use("/api/posts", userRouter);
 
 app.use((err, req, res, next) => {
     const status = err.status || 500;
