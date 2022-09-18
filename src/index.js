@@ -29,7 +29,7 @@ app.use(cookieParser());
 app.use(express.json());
 app.use("/api/auth", authRouter);
 app.use("/api/users", userRouter);
-app.use("/api/posts", userRouter);
+app.use("/api/posts", postRouter);
 
 app.use((err, req, res, next) => {
     const status = err.status || 500;
