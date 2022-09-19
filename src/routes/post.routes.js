@@ -24,5 +24,8 @@ router.put('/:id/like', likePost);
 // Get All Timeline Post
 router.get('/timeline/all', getTimelinePost);
 
+// Get All Timeline Post
+// router.patch('/:id/comments', createComment);
+
 
 export default router;
