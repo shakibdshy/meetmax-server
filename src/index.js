@@ -11,7 +11,7 @@ const app = express();
 dotenv.config();
 
 const connect = () => {
-    mongoose.connect(process.env.MONGO_URI).then(() => {
+    mongoose.connect(process.env.DATABASE_URL).then(() => {
         console.log('MongoDB connected');
     }).catch(err => {
         throw err;
