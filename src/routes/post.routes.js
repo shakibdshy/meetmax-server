@@ -22,7 +22,7 @@ router.delete('/:id', deletePost);
 router.put('/:id/like', likePost);
 
 // Get All Timeline Post
-router.get('/timeline/all', getTimelinePost);
+router.get('/timeline/:userId', getTimelinePost);
 
 // Get All Timeline Post
 // router.patch('/:id/comments', createComment);
