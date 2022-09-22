@@ -29,6 +29,14 @@ const UserSchema = new mongoose.Schema({
         type: String,
         default: "",
     },
+    birth: {
+        type: String,
+        default: "",
+    },
+    gander: {
+        type: String,
+        default: "",
+    },
     followers: {
         type: Array,
         default: [],
